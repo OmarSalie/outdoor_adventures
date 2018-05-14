@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,CAAE;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;;AAGxB,IAAK;EACH,eAAe,EAAE,MAAM;;AAGzB,IAAK;EACH,gBAAgB,ECTN,OAAO",
+"sources": ["../scss/partials/_base.scss","../scss/master.scss"],
+"names": [],
+"file": "master.css"
+}
