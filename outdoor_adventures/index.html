@@ -8,10 +8,19 @@
     <title>Home Page | Outdoor Adventres</title>
 
     <!-- master stylesheet that contains the main theme of the site -->
-    <link rel="stylesheet" href="styles/master.css" type="text/css">
+    <link rel="stylesheet" href="css/master_home.css" type="text/css">
     <!-- fontawesome is a site that provides font icons, allowing the use of more interactive icons (https://fontawesome.com/) -->
-    <link rel="stylesheet" href="styles/fontawesome-all.css" type="text/css">
-    <!-- the site favicon -->
+    <link rel="stylesheet" href="css/fa-brands.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-brands.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-regular.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-regular.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-solid.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-solid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-all.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" type="text/css"> -->
+    <!-- the site favicon
     <link rel="icon" type="image/ico" href="">
 
   </head>
@@ -23,15 +32,36 @@
 
       <!-- header that contins the company/site name -->
       <header>
+        
         <h1>Outdoor Adventures</h1>
       </header>
 
       <!-- navigation bar -->
-      <nav>
+      <!-- mobile screen -->
+      <nav class="smallScreen">
+        <!-- dropdown button -->
+        <div class="menuIcon">
+            <button class="dropdownBtn"><i class="fas fa-bars iconWhite"></i></button>
+        </div>
+        <!-- dropdown menu contents -->
+        <div class="menuItems">
+          <ul>
+              <li> <a href="#"> Home </a> </li>
+              <li> <a href="#"> Gallery </a> </li>
+              <li> <a href="#"> Contact </a> </li>
+              <li> <a href="#"> Categories </a> </li>
+            </ul>
+        </div>
+        
+      </nav>
+
+      <!-- tablet screen and larger -->
+      <nav class="largeScreen">
         <ul>
           <li> <a href="#"> Home </a> </li>
           <li> <a href="#"> Gallery </a> </li>
           <li> <a href="#"> Contact </a> </li>
+          <li> <a href="#"> Categories </a> </li>
         </ul>
       </nav>
 
