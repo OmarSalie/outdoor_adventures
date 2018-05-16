@@ -14,80 +14,48 @@ main {
   grid-gap: 0; }
 
 header {
+  background-color: #7BC950;
   grid-column: 1/4;
-  grid-row: 1/4; }
+  grid-row: 1/3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 0;
+  position: fixed;
+  top: 0; }
 
-nav {
+.company_logo {
+  grid-column: 1/2; }
+
+.company_name {
+  grid-column: 2/5;
+  position: relative;
+  top: 20px; }
+
+.iconNav {
+  display: block;
+  font-size: 50px;
+  background-color: black;
+  color: white;
+  padding: 16px;
+  text-align: center; }
+  .iconNav a {
+    text-decoration: none; }
+    .iconNav a:active {
+      color: #7BC950; }
+    .iconNav a:visited {
+      color: white; }
+
+footer {
   grid-column: 1/4;
-  grid-row: 4/5;
-  position: sticky; }
+  grid-row: 6/8; }
 
 .whiteTxt {
   color: #fff; }
 
-.largeScreen {
-  display: none; }
-
-.smallScreen {
-  display: block;
-  width: 100%;
-  height: 100%; }
-  .smallScreen .dropdownBtn {
-    display: block;
-    width: 100%;
-    height: 100px;
-    background-color: black; }
-    .smallScreen .dropdownBtn i {
-      color: white;
-      font-size: 50px; }
-  .smallScreen .menuItems {
-    display: none;
-    position: relative; }
-    .smallScreen .menuItems ul {
-      list-style-type: none; }
-      .smallScreen .menuItems ul li {
-        display: block;
-        width: 100%;
-        height: 100px;
-        background-color: black; }
-        .smallScreen .menuItems ul li a {
-          text-decoration: none;
-          color: white; }
-    .smallScreen .menuItems:active {
-      display: block; }
-
-@media (min-width: 786px) {
-  .smallScreen {
-    display: none; }
-
-  .largeScreen {
-    width: 100%;
-    height: 50px;
-    margin: 0 auto;
-    background-color: black; }
-    .largeScreen ul {
-      display: block;
-      list-style-type: none;
-      align-content: center;
-      width: fit-content; }
-      .largeScreen ul li {
-        display: inline-block;
-        width: 200px;
-        height: 50px;
-        transition: background-color 0.5s ease-out; }
-        .largeScreen ul li:hover {
-          background-color: white; }
-        .largeScreen ul li a {
-          text-decoration: none;
-          text-align: center;
-          text-transform: uppercase;
-          display: block;
-          width: 100%;
-          height: 100%;
-          padding: 8%;
-          color: white; }
-          .largeScreen ul li a:hover {
-            text-decoration: underline;
-            color: black; } }
+nav {
+  position: fixed;
+  bottom: 0; }
 
 /*# sourceMappingURL=master_home.css.map */
