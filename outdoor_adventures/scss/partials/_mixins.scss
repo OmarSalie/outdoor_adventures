@@ -1,0 +1,15 @@
+@mixin bgCover {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin bgStretch {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@mixin fillSpace {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

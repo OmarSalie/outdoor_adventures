@@ -31,9 +31,10 @@
     <main>
 
       <!-- header that contins the company/site name -->
+      <div id="home_ref"></div>
       <header>
         <div class="company_logo">
-          <a href="index.html"><img src="images/oa.png" title="Outdoor Adventures"></a>
+          <a href="#home_ref"><img src="images/oa.png" title="Outdoor Adventures"></a>
         </div>
 
         <div class="company_name">
@@ -41,7 +42,7 @@
         </div>
         
         <div class="mobile_home iconNav">
-          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href="#home_ref"><i class="fas fa-home"></i></a>
         </div>
         <div class="mobile_gallery iconNav">
           <a href="gallery.html"><i class="fas fa-images"></i></a>
@@ -50,7 +51,7 @@
           <a href="contact.html"><i class="fas fa-phone"></i></a>
         </div>
         <div class="mobile_categories iconNav">
-          <a href=""><i class="fas fa-list-ul"></i></a>
+          <a href="#category_ref"><i class="fas fa-list-ul"></i></a>
         </div>
 
         <!-- navigation bar -->
@@ -68,22 +69,30 @@
       <!--  -->
       <section class="slogan"><p>Experience the outdoors</p></section>
 
-      <div id="hiking_category"></div>
-      
-      <div id="camping_category"></div>
-      <div id="fishing_category"></div>
-      <div id="rockClimbing_category"></div>
+      <div id="category_ref"></div>
+
+      <div id="hiking_category" class="category"><a href="#hiking_ref"></a></div>
+
+      <div id="camping_category" class="category"><a href="#camping_ref"></a></div>
+
+      <div id="fishing_category" class="category"><a href="#fishing_ref"></a></div>
+
+      <div id="rockClimbing_category" class="category"><a href="#rockClimbing_ref"></a></div>
 
       <!-- Hiking section -->
+      <div id="hiking_ref"></div>
       <section id="hiking_section"></section>
 
       <!-- Camping section -->
+      <div id="camping_ref"></div>
       <section id="camping_section"></section>
 
       <!-- Fishing ssection -->
+      <div id="fishing_ref"></div>
       <section id="fishing_section"></section>
 
       <!-- Rock Climbing section -->
+      <div id="rockClimbing_ref"></div>
       <section id="rockClimbing_section"></section>
     
       <!-- footer containing company information -->
