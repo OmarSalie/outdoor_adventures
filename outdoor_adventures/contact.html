@@ -8,11 +8,20 @@
     <title>Contact Form | Outdoor Adventres</title>
 
     <!-- master stylesheet that contains the main theme of the site -->
-    <link rel="stylesheet" href="styles/master.css" type="text/css">
+    <link rel="stylesheet" href="css/master_home.css" type="text/css">
     <!-- fontawesome is a site that provides font icons, allowing the use of more interactive icons (https://fontawesome.com/) -->
-    <link rel="stylesheet" href="styles/fontawesome-all.css" type="text/css">
-    <!-- the site favicon -->
-    <link rel="icon" type="image/ico" href="">
+    <link rel="stylesheet" href="css/fa-brands.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-brands.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-regular.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-regular.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-solid.css" type="text/css">
+    <link rel="stylesheet" href="css/fa-solid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-all.css" type="text/css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" type="text/css"> 
+    <!-- the site favicon-->
+    <link rel="icon" type="image/ico" href="images/oa.png">
 
   </head>
 
@@ -22,21 +31,58 @@
     <main>
 
       <!-- header that contins the company/site name -->
+      <div id="home_ref"></div>
       <header>
-        <h1>Outdoor Adventures</h1>
+        <div class="company_logo">
+          <a href="index.html"><img src="images/oa.png" title="Outdoor Adventures"></a>
+        </div>
+
+        <div class="company_name">
+          <h1>Outdoor Adventures</h1>
+        </div>
+        
+        <div class="mobile_home iconNav">
+          <a href="index.html"><i class="fas fa-home"></i></a>
+        </div>
+        <div class="mobile_gallery iconNav">
+          <a href="gallery.html"><i class="fas fa-images"></i></a>
+        </div>
+        <div class="mobile_contact iconNav">
+          <a href="contact.html"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="mobile_categories iconNav">
+          <a href="index.html#category_ref"><i class="fas fa-list-ul"></i></a>
+        </div>
+
+        <!-- navigation bar -->
+        <nav>
+          <ul>
+            <li> <a href="#"> Home </a> </li>
+            <li> <a href="#"> Gallery </a> </li>
+            <li> <a href="#"> Contact </a> </li>
+            <li> <a href="#"> Categories </a> </li>
+          </ul>
+        </nav>
+
       </header>
 
-      <!-- navigation bar -->
-      <nav>
-        <ul>
-          <li> <a href="#"> Home </a> </li>
-          <li> <a href="#"> Gallery </a> </li>
-          <li> <a href="#"> Contact </a> </li>
-        </ul>
-      </nav>
+      <form action="">
+        <input type="text" placeholder="Name" class="form_name">
+        <input type="text" placeholder="Surname" class="form_surname">
+        <input type="email" name="" id="" placeholder="E-mail" class="form_email">
+        <select name="" id="" class="form_subject">
+          <option value="hiking">Hiking</option>
+          <option value="camping">Camping</option>
+          <option value="fishing">Fishing</option>
+          <option value="rock_climbing">Rock Climbing</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Message" class="form_message"></textarea>
+        <button type="submit" class="form_send_btn">Send</button>
+      </form> 
 
       <!-- footer containing company information -->
-      <footer></footer>
+      <footer class="contact_footer"></footer>
     </main>
   </body>
 </html>

@@ -36,6 +36,7 @@ header {
   top: 20px;
   left: 5px; }
   .company_logo a img {
+    display: block;
     width: 100%;
     height: 100%; }
 
@@ -51,9 +52,9 @@ header {
   text-align: center;
   color: white;
   background-image: url(../images/slogan_background_s.jpeg);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  background-size: cover; }
   .slogan p {
     margin: 100px auto; }
 
@@ -136,6 +137,44 @@ header {
 footer {
   grid-column: 1/4;
   grid-row: 34/36;
+  background-color: #000; }
+
+form {
+  grid-column: 1/4;
+  grid-row: 3/7;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-auto-rows: 50px;
+  grid-gap: 10px; }
+
+.form_name {
+  grid-column: 2/3;
+  grid-row: 2/3; }
+
+.form_surname {
+  grid-column: 2/3;
+  grid-row: 3/4; }
+
+.form_email {
+  grid-column: 2/3;
+  grid-row: 4/5; }
+
+.form_subject {
+  grid-column: 2/3;
+  grid-row: 5/6; }
+
+.form_message {
+  grid-column: 2/3;
+  grid-row: 6/8;
+  resize: none; }
+
+.form_send_btn {
+  grid-column: 2/3;
+  grid-row: 8/9; }
+
+.contact_footer {
+  grid-column: 1/4;
+  grid-row: 8/10;
   background-color: #000; }
 
 .whiteTxt {
