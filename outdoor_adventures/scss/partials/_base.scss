@@ -92,9 +92,11 @@ p {
   main {
     grid-auto-rows: 200px;
   }
+}
+@media (min-width: 1280px){
   p {
     font: {
-      size: 3.2vw;
+      size: 2vw;
     }
   }
 }
@@ -159,12 +161,17 @@ header {
   }
   @media (min-width: 1024px){
     header {
-      grid-auto-rows: 200px;
+      grid: {
+        column: 1/4;
+        row: 1/2;
+      }
+      grid-auto-rows: 100px;
     }
     .company_name{
       top: 0;
     }
   }
+  
 //==============================================================================
 //Home Page
 //==============================================================================
@@ -180,6 +187,14 @@ header {
     position: center;
   }
   @include bgCover;
+}
+@media (min-width: 1024px){
+  .slogan {
+    grid: {
+      column: 1/4;
+      row: 2/7;
+    }
+  }
 }
 
 #category_ref { grid-row-start: 5; } //this allows the header to not cover the categories
@@ -323,6 +338,13 @@ form {
     template-columns: 10% 80% 10%;
     auto-rows: 50px;
     gap: 10px;
+  }
+}
+@media (min-width: 1024px){
+  form {
+    grid: {
+      row: 2/8;
+    }
   }
 }
 

@@ -43,15 +43,85 @@
   }
   .desktopNav {
     display: block;
+    font-size: 50px;
+    background-color: black;
+    color: white;
+    //padding: 16px;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      @include fillSpace;
+      font: {
+        family: 'Didact Gothic';
+      }
+
+      &:active {
+        color: $mantis;
+      }
+
+      &:visited {
+        color: white;
+      }
+      &:hover {
+        color:black;
+        text-decoration: underline;
+      }
+    }
+    &:hover {
+      background-color: white;
+    }
   }
   .sidebar {
     display: block;
   }
 }
+@import "partials/dropdown";
 //==============================================================================
 // Sidebar for gallery page (Desktop only)
 //==============================================================================
+.sidebar {
+  .sidebarItem { 
+    display: block;
+    width: 300px;
+    height: 100px;
+    position: fixed;
 
+    &:hover {
+      border-left: 5px solid $mantis;
+    }
+    font: {
+      family: 'Didact Gothic';
+    }
+
+    a {
+      @include fillSpace;
+
+      text-align: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.sidebar_hiking {
+  top: 200px;
+}
+.sidebar_camping {
+  top: 300px;
+}
+.sidebar_fishing {
+  top: 400px;
+}
+.sidebar_rockClimbing {
+  top: 500px;
+}
+
+@media (min-width: 1280px){
+  
+}
 //==============================================================================
 // _navbar.scss end
 //==============================================================================
