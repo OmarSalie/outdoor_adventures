@@ -171,6 +171,13 @@ header {
       top: 0;
     }
   }
+  @media (min-width: 1440px){
+    h1 {
+      font: {
+        size: 3vw;
+      }
+    }
+  }
   
 //==============================================================================
 //Home Page
@@ -310,10 +317,74 @@ header {
 footer {
   grid: {
     column: 1/4;
-    row: 34/36;
+    row: 34/35;
   }
 
   background-color: #000;
+
+  display: grid;
+  grid: {
+    template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer_links {
+  display: none;
+}
+
+.footer_logo {
+  margin: 20px;
+  background-image: url(../images/oa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.footer_contact {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    grid: {
+      template-columns: repeat(3, 1fr);
+      template-rows: repeat(3, 1fr);
+    }
+  }  
+  
+  .footer_links {
+    display: block;
+    grid: {
+      column: 1;
+      row: 1/4;
+    }
+  }
+  
+  .footer_logo {
+    grid: {
+      column: 2;
+      row: 1/4;
+    }
+    margin: 20px;
+    background: {
+      image: url(../images/oa.png);
+      position: center;
+      @include bgStretch;
+    }
+    a {
+      @include fillSpace;
+    }
+  }
+  .footer_contact {
+    grid: {
+      column: 3/4;
+      row: 2/3;
+    }
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
 }
 
 // =============================================================================
@@ -389,7 +460,7 @@ form {
 .contact_footer {
   grid: {
     column: 1/4;
-    row: 8/10;
+    row: 8/9;
   }
 
   background-color: #000;
