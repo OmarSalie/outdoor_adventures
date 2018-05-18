@@ -100,7 +100,10 @@ header {
     grid-auto-rows: 150px; } }
 @media (min-width: 1024px) {
   header {
-    grid-auto-rows: 200px; } }
+    grid-auto-rows: 200px; }
+
+  .company_name {
+    top: 0; } }
 .slogan {
   grid-column: 1/4;
   grid-row: 3/7;
@@ -371,6 +374,11 @@ footer {
   grid-column: 1/4;
   grid-row: 19/21; }
 
+@media (min-width: 1024px) {
+  .sidebar {
+    grid-column: 1;
+    grid-row: 3/21;
+    background-color: black; } }
 form {
   background-image: url(../images/background_mobile.jpg);
   background-repeat: no-repeat;
@@ -439,5 +447,15 @@ form {
 
 .sidebar {
   display: none; }
+
+@media (min-width: 1024px) {
+  .iconNav {
+    display: none; }
+
+  .desktopNav {
+    display: block; }
+
+  .sidebar {
+    display: block; } }
 
 /*# sourceMappingURL=master_home.css.map */
