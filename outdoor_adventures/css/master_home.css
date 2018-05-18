@@ -425,7 +425,7 @@ form {
 @media (min-width: 768px) {
   .iconNav {
     font-size: 100px; } }
-nav {
+.desktopNav {
   display: none; }
 
 /*# sourceMappingURL=master_home.css.map */
