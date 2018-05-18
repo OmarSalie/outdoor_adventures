@@ -49,6 +49,12 @@ p {
 .blackOutline {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
 
+@media (min-width: 768px) {
+  main {
+    grid-auto-rows: 150px; }
+
+  p {
+    font-size: 3.2vw; } }
 #home_ref {
   grid-row-start: 1; }
 
@@ -83,6 +89,9 @@ header {
   font-family: 'Skranji', cursive;
   font-size: 3vw; }
 
+@media (min-width: 768px) {
+  header {
+    grid-auto-rows: 150px; } }
 .slogan {
   grid-column: 1/4;
   grid-row: 3/7;
@@ -394,6 +403,11 @@ form {
   grid-row: 8/10;
   background-color: #000; }
 
+@media (min-width: 768px) {
+  form {
+    grid-auto-rows: 75px; }
+    form input::placeholder, form textarea::placeholder, form select, form button {
+      font-size: 3vw; } }
 .iconNav {
   display: block;
   font-size: 50px;
@@ -408,6 +422,9 @@ form {
     .iconNav a:visited {
       color: white; }
 
+@media (min-width: 768px) {
+  .iconNav {
+    font-size: 100px; } }
 nav {
   display: none; }
 

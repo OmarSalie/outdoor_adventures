@@ -21,6 +21,11 @@
       }
     }
 }
+@media (min-width: 768px){
+  .iconNav {
+    font-size: 100px;
+  }
+}
 
 nav {
     display: none;  //hide the unused navigation bar
