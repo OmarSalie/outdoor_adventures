@@ -1,14 +1,14 @@
-@mixin bgCover {
+@mixin bgCover {    //background covers the space
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@mixin bgStretch {
+@mixin bgStretch {  //background stretched to fill the space
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-@mixin fillSpace {
+@mixin fillSpace {  //the block is filled
     display: block;
     width: 100%;
     height: 100%;
