@@ -44,6 +44,35 @@ a{
   color: $whiteTxt;
 }
 
+h2 {
+  font: {
+    family: 'Skranji', cursive;
+    size: 6vw;
+  }
+}
+
+h3 {
+  font: {
+    family: 'Indie Flower', cursive;
+    size: 8vw;
+  }
+}
+
+p {
+  padding: 10px;
+  text: {
+    align: justify;
+  }
+  font: {
+    family: 'Didact Gothic';
+    size: 14px;
+  }
+}
+
+.blackOutline
+{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+}
 
 
 //==============================================================================
@@ -95,7 +124,10 @@ header {
     position: relative;
     top: 40px;  // vertically align the name
 
-    font-size: 4vw;
+    font: {
+      family: 'Skranji', cursive;
+      size: 3vw;
+    }
   }
   
 //==============================================================================
@@ -183,8 +215,13 @@ header {
   a {
     @include fillSpace;
     padding: 50px;
+    font: {
+      family: 'Skranji', cursive;
+      size: 5vw;
+    }
   }
 }
+
 
 #hiking_ref { grid-row-start: 13; } //this allows the header to not cover the section
 #hiking_section {
@@ -527,6 +564,10 @@ footer {
 
 .gallery_image {
   @include fillSpace;
+
+  img {
+    @include fillSpace;
+  }
 }
 
 .gallery_footer {
