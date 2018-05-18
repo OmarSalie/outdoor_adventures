@@ -55,6 +55,12 @@ p {
 
   p {
     font-size: 3.2vw; } }
+@media (min-width: 1024px) {
+  main {
+    grid-auto-rows: 200px; }
+
+  p {
+    font-size: 3.2vw; } }
 #home_ref {
   grid-row-start: 1; }
 
@@ -92,11 +98,14 @@ header {
 @media (min-width: 768px) {
   header {
     grid-auto-rows: 150px; } }
+@media (min-width: 1024px) {
+  header {
+    grid-auto-rows: 200px; } }
 .slogan {
   grid-column: 1/4;
   grid-row: 3/7;
   color: white;
-  background-image: url(../images/slogan_background_s.jpeg);
+  background-image: url(../images/slogan_background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -107,7 +116,7 @@ header {
 #hiking_category {
   grid-column: 1/3;
   grid-row: 7/9;
-  background-image: url(../images/category_hiking_s.jpeg);
+  background-image: url(../images/category_hiking.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
   #hiking_category:hover {
@@ -116,7 +125,7 @@ header {
 #camping_category {
   grid-column: 2/4;
   grid-row: 9/11;
-  background-image: url(../images/category_camping_s.jpeg);
+  background-image: url(../images/category_camping.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%; }
   #camping_category:hover {
@@ -125,7 +134,7 @@ header {
 #fishing_category {
   grid-column: 1/3;
   grid-row: 11/13;
-  background-image: url(../images/category_fishing_s.jpeg);
+  background-image: url(../images/category_fishing.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%; }
   #fishing_category:hover {
@@ -134,7 +143,7 @@ header {
 #rockClimbing_category {
   grid-column: 2/4;
   grid-row: 13/15;
-  background-image: url(../images/category_rockclimbing_s.jpeg);
+  background-image: url(../images/category_rockclimbing.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%; }
   #rockClimbing_category:hover {
@@ -189,7 +198,7 @@ footer {
   grid-column: 1/4;
   grid-row: 1/3; }
 
-.hiking_gallery {
+#hiking_gallery {
   grid-column: 1/4;
   grid-row: 3/4; }
 
@@ -229,7 +238,7 @@ footer {
   grid-column: 3;
   grid-row: 6; }
 
-.camping_gallery {
+#camping_gallery {
   grid-column: 1/4;
   grid-row: 7/8; }
 
@@ -269,7 +278,7 @@ footer {
   grid-column: 3;
   grid-row: 10; }
 
-.fishing_gallery {
+#fishing_gallery {
   grid-column: 1/4;
   grid-row: 11/12; }
 
@@ -309,7 +318,7 @@ footer {
   grid-column: 3;
   grid-row: 14; }
 
-.rockClimbing_gallery {
+#rockClimbing_gallery {
   grid-column: 1/4;
   grid-row: 15/16; }
 
@@ -426,6 +435,9 @@ form {
   .iconNav {
     font-size: 100px; } }
 .desktopNav {
+  display: none; }
+
+.sidebar {
   display: none; }
 
 /*# sourceMappingURL=master_home.css.map */

@@ -88,6 +88,16 @@ p {
     }
   }
 }
+@media (min-width: 1024px){
+  main {
+    grid-auto-rows: 200px;
+  }
+  p {
+    font: {
+      size: 3.2vw;
+    }
+  }
+}
 //==============================================================================
 // Header & Navigation
 // =============================================================================
@@ -147,6 +157,11 @@ header {
       grid-auto-rows: 150px;
     }
   }
+  @media (min-width: 1024px){
+    header {
+      grid-auto-rows: 200px;
+    }
+  }
 //==============================================================================
 //Home Page
 //==============================================================================
@@ -158,7 +173,7 @@ header {
   color: white;
   
   background: {
-    image: url(../images/slogan_background_s.jpeg);
+    image: url(../images/slogan_background.jpg);
     position: center;
   }
   @include bgCover;
@@ -172,7 +187,7 @@ header {
     row: 7/9;
   }
 
-  background-image: url(../images/category_hiking_s.jpeg);
+  background-image: url(../images/category_hiking.jpg);
   @include bgCover;
 
   &:hover {
@@ -186,7 +201,7 @@ header {
     row: 9/11;
   }
 
-  background-image: url(../images/category_camping_s.jpeg);
+  background-image: url(../images/category_camping.jpg);
   @include bgStretch;
 
   &:hover {
@@ -200,7 +215,7 @@ header {
     row: 11/13;
   }
 
-  background-image: url(../images/category_fishing_s.jpeg);
+  background-image: url(../images/category_fishing.jpg);
   @include bgStretch;
 
   &:hover {
@@ -214,7 +229,7 @@ header {
     row: 13/15;
   }
 
-  background-image: url(../images/category_rockclimbing_s.jpeg);
+  background-image: url(../images/category_rockclimbing.jpg);
   @include bgStretch;
 
   &:hover {
@@ -293,7 +308,7 @@ footer {
   }
 }
 
-.hiking_gallery {
+#hiking_gallery {
   grid: {
     column: 1/4;
     row: 3/4;
@@ -363,7 +378,7 @@ footer {
   }
 }
 
-.camping_gallery {
+#camping_gallery {
   grid: {
     column: 1/4;
     row: 7/8;
@@ -433,7 +448,7 @@ footer {
   }
 }
 
-.fishing_gallery {
+#fishing_gallery {
   grid: {
     column: 1/4;
     row: 11/12;
@@ -503,7 +518,7 @@ footer {
   }
 }
 
-.rockClimbing_gallery {
+#rockClimbing_gallery {
   grid: {
     column: 1/4;
     row: 15/16;
@@ -586,6 +601,9 @@ footer {
     column: 1/4;
     row: 19/21;
   }
+}
+@media (min-width: 1024px){
+  
 }
 //==============================================================================
 // Conatct Page
