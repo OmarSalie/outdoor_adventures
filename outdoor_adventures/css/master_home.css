@@ -35,6 +35,8 @@ h2 {
   font-size: 6vw; }
 
 h3 {
+  padding-top: 100px;
+  text-align: center;
   font-family: 'Indie Flower', cursive;
   font-size: 8vw; }
 
@@ -84,14 +86,11 @@ header {
 .slogan {
   grid-column: 1/4;
   grid-row: 3/7;
-  text-align: center;
   color: white;
   background-image: url(../images/slogan_background_s.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
-  .slogan p {
-    margin: 100px auto; }
 
 #category_ref {
   grid-row-start: 5; }
@@ -355,8 +354,11 @@ footer {
   grid-row: 19/21; }
 
 form {
+  background-image: url(../images/background_mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   grid-column: 1/4;
-  grid-row: 3/7;
+  grid-row: 3/8;
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-auto-rows: 50px;

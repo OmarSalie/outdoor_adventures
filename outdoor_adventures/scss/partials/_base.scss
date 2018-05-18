@@ -52,6 +52,10 @@ h2 {
 }
 
 h3 {
+  padding-top: 100px;
+  text: {
+    align: center;
+  }
   font: {
     family: 'Indie Flower', cursive;
     size: 8vw;
@@ -138,8 +142,6 @@ header {
     column: 1/4;
     row: 3/7;
   }
-  
-  text-align: center;
   color: white;
   
   background: {
@@ -147,10 +149,6 @@ header {
     position: center;
   }
   @include bgCover;
-
-  p {
-    margin: 100px auto;
-  }
 }
 
 #category_ref { grid-row-start: 5; } //this allows the header to not cover the categories
@@ -580,9 +578,13 @@ footer {
 // Conatct Page
 //==============================================================================
 form {
+  background: {
+    image: url(../images/background_mobile.jpg);
+  }
+  @include bgStretch;
   grid: {
     column: 1/4;
-    row: 3/7;
+    row: 3/8;
   }
 
   display: grid;
