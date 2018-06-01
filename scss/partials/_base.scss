@@ -1,0 +1,484 @@
+// base styling
+//==============================================================================
+// Global site changes
+// =============================================================================
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; //make auto scrolling on the same page smoother
+}
+
+main {
+  background-color: $pastelGreen;
+  display: grid;
+  
+  grid: {
+    template-columns: repeat(3, 1fr);
+    auto-rows: 100px;
+    gap: 0;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: white;
+
+  &:hover{
+    text-decoration: none;
+    color: white;
+  }
+  &:active {
+    text-decoration: none;
+    color: white;
+  }
+  &:visited {
+    text-decoration: none;
+    color: white;
+  }
+}
+.whiteTxt {
+  color: $whiteTxt;
+}
+
+h2 {
+  font: {
+    family: 'Skranji', cursive;
+    size: 6vw;
+  }
+}
+
+h3 {
+  padding-top: 100px;
+  text: {
+    align: center;
+  }
+  font: {
+    family: 'Indie Flower', cursive;
+    size: 8vw;
+  }
+}
+
+p {
+  padding: 10px;
+  text: {
+    align: justify;
+  }
+  font: {
+    family: 'Didact Gothic';
+    size: 14px;
+  }
+}
+
+.blackOutline
+{
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;  
+}
+
+@media (min-width: 768px){
+  main {
+    grid-auto-rows: 150px;
+  }
+  p {
+    font: {
+      size: 3.2vw;
+    }
+  }
+}
+@media (min-width: 1024px){
+  main {
+    grid-auto-rows: 200px;
+  }
+}
+@media (min-width: 1280px){
+  p {
+    font: {
+      size: 2vw;
+    }
+  }
+}
+//==============================================================================
+// Header & Navigation
+// =============================================================================
+#home_ref { grid-row-start: 1; }  //this allows the header to not cover the slogan
+
+header {
+  background-color: $mantis;
+
+  grid: {
+    column: 1/4;
+    row: 1/3;
+  }
+
+  width: 100%;
+  display: grid;
+
+  grid: {
+    template-columns: repeat(4, 1fr);
+    auto-rows: 100px;
+    gap: 0;
+  }
+
+  position: fixed;  //fixed the header, which contains the navbar, to the top
+  top: 0;
+}
+
+  // Indented because they are contained in a nested grid
+  .company_logo {
+    grid-column: 1/2;
+
+    width: 80px;
+    height: 50px;
+
+    position: relative; //align the logo
+    top: 20px;
+    left: 5px;
+    a {
+      img {
+        @include fillSpace;
+      }
+    }
+  }
+
+  .company_name {
+    grid-column: 2/5;
+    
+    position: relative;
+    top: 40px;  // vertically align the name
+
+    font: {
+      family: 'Skranji', cursive;
+      size: 3vw;
+    }
+  }
+  @media (min-width: 768px){
+    header {
+      grid-auto-rows: 150px;
+    }
+  }
+  @media (min-width: 1024px){
+    header {
+      grid: {
+        column: 1/4;
+        row: 1/2;
+      }
+      grid-auto-rows: 100px;
+    }
+    .company_name{
+      top: 0;
+    }
+  }
+  @media (min-width: 1440px){
+    h1 {
+      font: {
+        size: 3vw;
+      }
+    }
+  }
+  
+//==============================================================================
+//Home Page
+//==============================================================================
+.slogan {
+  grid: {
+    column: 1/4;
+    row: 3/7;
+  }
+  color: white;
+  
+  background: {
+    image: url(../images/slogan_background.jpg);
+    position: center;
+  }
+  @include bgCover;
+}
+@media (min-width: 1024px){
+  .slogan {
+    grid: {
+      column: 1/4;
+      row: 2/7;
+    }
+  }
+}
+
+#category_ref { grid-row-start: 5; } //this allows the header to not cover the categories
+
+#hiking_category {
+  grid: {
+    column: 1/3;
+    row: 7/9;
+  }
+
+  background-image: url(../images/category_hiking.jpg);
+  @include bgCover;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);  //creates a tranparent layer over the images when selected
+  }
+}
+
+#camping_category {
+  grid: {
+    column: 2/4;
+    row: 9/11;
+  }
+
+  background-image: url(../images/category_camping.jpg);
+  @include bgStretch;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  }
+}
+
+#fishing_category {
+  grid: {
+    column: 1/3;
+    row: 11/13;
+  }
+
+  background-image: url(../images/category_fishing.jpg);
+  @include bgStretch;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  }
+}
+
+#rockClimbing_category {
+  grid: {
+    column: 2/4;
+    row: 13/15;
+  }
+
+  background-image: url(../images/category_rockclimbing.jpg);
+  @include bgStretch;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+  }
+}
+
+.category {
+  a {
+    @include fillSpace;
+    padding: 50px;
+    font: {
+      family: 'Skranji', cursive;
+      size: 5vw;
+    }
+  }
+}
+
+
+#hiking_ref { grid-row-start: 13; } //this allows the header to not cover the section
+#hiking_section {
+  grid: {
+    column: 1/4;
+    row: 15/19;
+  }
+  
+  background-color: $magicMint;
+}
+
+#camping_ref { grid-row-start: 18; }
+#camping_section {
+  grid: {
+    column: 1/4;
+    row: 20/24;
+  }
+
+  background-color: $aquamarine;
+}
+
+#fishing_ref { grid-row-start: 23; }
+#fishing_section {
+  grid: {
+    column: 1/4;
+    row: 25/29;
+  }
+
+  background-color: $magicMint;
+}
+
+#rockClimbing_ref { grid-row-start: 28; }
+#rockClimbing_section {
+  grid: {
+    column: 1/4;
+    row: 30/34;
+  }
+
+  background-color: $aquamarine;
+}
+
+footer {
+  grid: {
+    column: 1/4;
+    row: 34/35;
+  }
+
+  background-color: #000;
+
+  display: grid;
+  grid: {
+    template-columns: repeat(2, 1fr);
+  }
+}
+
+.footer_links {
+  display: none;
+}
+
+.footer_logo {
+  margin: 20px;
+  background-image: url(../images/oa.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.footer_contact {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    grid: {
+      template-columns: repeat(3, 1fr);
+      template-rows: repeat(3, 1fr);
+    }
+  }  
+  
+  .footer_links {
+    display: block;
+    grid: {
+      column: 1;
+      row: 1/4;
+    }
+  }
+  
+  .footer_logo {
+    grid: {
+      column: 2;
+      row: 1/4;
+    }
+    margin: 20px;
+    background: {
+      image: url(../images/oa.png);
+      position: center;
+      @include bgStretch;
+
+    }
+    a {
+      @include fillSpace;
+    }
+  }
+
+  .footer_contact {
+    grid: {
+      column: 3/4;
+      row: 2/3;
+    }
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+}
+
+// =============================================================================
+// Gallery Page
+// =============================================================================
+@import "partials/gallery"; //code became too long
+//==============================================================================
+// Conatct Page
+//==============================================================================
+form {
+  background: {
+    image: url(../images/background_mobile.jpg);
+  }
+  @include bgStretch;
+  grid: {
+    column: 1/4;
+    row: 3/8;
+  }
+
+  display: grid;
+  grid: {
+    template-columns: 10% 80% 10%;
+    auto-rows: 50px;
+    gap: 10px;
+  }
+}
+@media (min-width: 1024px){
+  form {
+    grid: {
+      row: 2/8;
+    }
+  }
+}
+
+.form_name {
+  grid: {
+    column: 2/3;
+    row: 2/3;
+  }
+}
+.form_surname {
+  grid: {
+    column: 2/3;
+    row: 3/4;
+  }
+}
+.form_email {
+  grid: {
+    column: 2/3;
+    row: 4/5;
+  }
+}
+.form_subject {
+  grid: {
+    column: 2/3;
+    row: 5/6;
+  }
+}
+.form_message {
+  grid: {
+    column: 2/3;
+    row: 6/8;
+  }
+  resize: none;
+}
+.form_send_btn {
+  grid: {
+    column: 2/3;
+    row: 8/9;
+  }
+}
+
+.contact_footer {
+  grid: {
+    column: 1/4;
+    row: 8/9;
+  }
+
+  background-color: #000;
+}
+
+@media (min-width: 768px){
+  form {
+    grid-auto-rows: 75px;
+
+    input::placeholder, textarea::placeholder, select, button {
+      font: {
+        size: 3vw;
+      }
+    }
+  }
+}
+//==============================================================================
+// _base.scss end
+//==============================================================================
