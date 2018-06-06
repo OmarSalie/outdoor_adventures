@@ -370,9 +370,11 @@ footer {
     background: {
       image: url(../images/oa.png);
       position: center;
-      @include bgStretch;
+      
+      
 
     }
+    @include bgStretch;
     a {
       @include fillSpace;
     }
