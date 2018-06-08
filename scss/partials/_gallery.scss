@@ -298,7 +298,7 @@
         column: 1;
         row: 2/27;
       }
-      background-color: black;
+      //background-color: black;
     }
 
     #hiking_gallery {
@@ -581,6 +581,7 @@
         }
       }
       .gallery_footer {
+        z-index: 1;
         grid: {
             column: 1/4;
             row: 26/27;
